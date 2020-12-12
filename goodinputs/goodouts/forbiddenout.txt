@@ -1,0 +1,11 @@
+7 0 0 1		jump to first instr
+6 0 0 7		load 3 variables (call, procedure, else)
+1 0 0 19	load 19 into reg 0
+4 0 0 5		store reg 0 in procedure
+1 0 0 9		load 9 into reg 0
+4 0 0 6		load reg 0 into else
+3 0 0 5		load procedure into reg 0
+3 1 0 6		load else into reg 1
+13 0 0 1	add reg 0 and reg 1, put result in reg 0
+4 0 0 4		store reg 0 into call
+11 0 0 3	end program

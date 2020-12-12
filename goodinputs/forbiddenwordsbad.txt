@@ -1,0 +1,6 @@
+var call, procedure;
+begin
+	procedure := 19;
+	else:=9;
+	call := procedure + else;
+end.

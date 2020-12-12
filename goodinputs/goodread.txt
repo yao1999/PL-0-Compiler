@@ -1,0 +1,6 @@
+var x, y, z;
+begin	
+  x := y + 56;
+  read y;
+  z := x + y;
+end.

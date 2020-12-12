@@ -1,0 +1,20 @@
+7 0 0 1		jump to first instr
+6 0 0 6		load 2 variables (x, y)
+1 0 0 8		load 8 into register 0
+4 0 0 4		store reg 0(12) into x
+1 0 0 10	load 10 into register 0
+4 0 0 5		store reg 0(10) into y
+3 0 0 4		load x into reg 0
+3 1 0 5		load y into reg 1
+23 0 0 1	compare reg 0 and reg 1 and see if r[0] > r[1]. store reg 0
+8 0 0 15	if reg 0 true, jump to line 10 (end)
+3 0 0 5		load y into reg 0
+1 1 0 1		load 1 into reg 1
+13 0 0 1	add reg 0 and 1 and store in reg 0
+4 0 0 5		store reg 0 into y
+7 0 0 6		jump back to line 6 (while) and keep going.
+1 0 0 33	load 33 into register 0
+4 0 0 4		load reg 0(33) into x
+1 0 0 22	load 22 into reg 0
+4 0 0 5		load reg 0(22) into y
+11 0 0 3	end program

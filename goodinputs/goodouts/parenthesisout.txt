@@ -1,0 +1,17 @@
+7 0 0 1		jump to first instr
+6 0 0 7		load 3 variables (x, y, z) (4(prestored) + 3(# var))
+1 0 0 1		load 1 into reg 0
+4 0 0 5		load reg0(1) into y
+3 0 0 5		load value of y (addr 5, x = 4 and 0-3 are taken)
+1 1 0 56	load value 56 into reg to temporarily store
+1 2 0 2		load value 56 into reg 2 to temporarily store
+13 1 1 2	add 2(stored as R[L]) and 56 (stored as R[M]) into register 1
+14 0 0 1	subtract the result
+4 0 0 4		store into x, which is address 4
+3 0 0 4		load the value of x (into reg 0)
+3 1 0 5		load the value of y (into reg 1)
+1 2 0 1		load the value of 3 (into reg 2) and temporarily store in reg 2
+16 1 1 2	divide (using R[L] to load x and R[M] to load the result) and store in reg 1
+15 0 0 1	multiply (using reg 1 to load the result) and store in reg 0
+4 0 0 6		store reg 0 into z, which is addr 6.
+11 0 0 3	end program

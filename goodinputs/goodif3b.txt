@@ -1,0 +1,8 @@
+var x, y, z;
+begin	
+  x := 8;
+  y := 10;
+  if x > y then
+    z := 1;
+  x := 13;
+end.

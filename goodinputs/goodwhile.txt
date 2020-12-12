@@ -1,0 +1,9 @@
+var x, y;
+begin
+	x:=12;
+	y:=10;
+	while x > y do
+	begin
+		y := y + 1;
+	end;
+end.

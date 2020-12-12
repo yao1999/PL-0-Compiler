@@ -1,0 +1,9 @@
+const i = -99;
+var x, y;
+begin
+  y := -1;
+  x := y + 56;
+  y := -x;
+  y := i;
+  x := -i;
+end.

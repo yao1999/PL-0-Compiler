@@ -1,0 +1,5 @@
+var x, y, z;
+begin	
+  x := y + 56;
+  z := x / 3;
+end.

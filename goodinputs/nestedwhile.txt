@@ -1,0 +1,19 @@
+const i = 13;
+var x, y, z;
+begin
+	x := 12;
+	y := 33;
+	z := 44;
+	while x <> i do
+	begin
+		x := x + 1;
+		while 33=y do
+		begin
+			y := 99999;
+			while (3 + z) > 5 do
+			begin
+				z := 1;
+			end;
+		end;
+	end;
+end.

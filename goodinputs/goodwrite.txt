@@ -1,0 +1,7 @@
+var x, y, z;
+begin	
+  x := y + 56;
+  y := 99;
+  write y;
+  z := x + y;
+end.

@@ -1,0 +1,6 @@
+var x, y, z;
+begin
+  y := 1;
+  x := y - (56 + 2);
+  z := x * (y / 1);
+end.

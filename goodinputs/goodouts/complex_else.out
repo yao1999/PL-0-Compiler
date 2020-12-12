@@ -1,0 +1,600 @@
+Lexeme List:
+29 2 a 17 2 b 17 2 c 17 2 d 17 2 out 18 21 2 a 20 3 1 18 2 b 20 3 2 18 2 c 20 3 3 18 2 d 20 3 4 18 2 out 20 3 0 18 23 2 a 9 3 1 24 2 out 20 3 1 18 31 2 out 18 23 2 a 9 3 2 24 2 out 20 3 2 18 31 2 out 18 23 2 d 12 15 2 c 6 2 b 16 5 2 a 24 2 out 20 3 3 18 31 2 out 18 23 2 b 9 3 2 24 2 out 20 3 4 33 2 out 20 3 5 18 31 2 out 18 23 2 b 10 3 2 24 2 out 20 3 6 33 2 out 20 3 7 18 31 2 out 18 23 2 c 9 3 3 24 21 2 out 20 3 0 18 2 out 20 2 out 4 2 a 18 2 out 20 2 out 4 2 b 18 2 out 20 2 out 4 2 c 18 22 18 31 2 out 18 23 2 c 9 3 5 24 21 2 out 20 3 0 18 2 out 20 3 5 18 2 out 20 2 out 4 3 10 18 2 out 20 2 out 5 3 5 18 22 33 21 2 out 20 3 15 18 2 out 20 2 out 5 2 b 18 2 out 20 2 out 5 2 a 18 2 out 20 2 out 6 3 2 18 22 18 31 2 out 18 23 2 a 11 3 10 24 23 2 b 11 3 10 24 23 2 c 11 3 10 24 23 2 d 11 3 10 24 2 out 20 3 100 18 31 2 out 18 23 2 a 13 3 10 24 2 out 20 3 1 33 23 2 b 13 3 10 24 2 out 20 3 2 33 23 2 c 13 3 10 24 2 out 20 3 3 33 23 2 d 13 3 10 24 2 out 20 3 4 33 2 out 20 3 20 18 31 2 out 18 22 19 
+
+Lexeme List (Symbolic Representation):
+varsym identsym a commasym identsym b commasym identsym c commasym identsym d commasym identsym out semicolonsym beginsym identsym a becomessym numbersym 1 semicolonsym identsym b becomessym numbersym 2 semicolonsym identsym c becomessym numbersym 3 semicolonsym identsym d becomessym numbersym 4 semicolonsym identsym out becomessym numbersym 0 semicolonsym ifsym identsym a eqsym numbersym 1 thensym identsym out becomessym numbersym 1 semicolonsym writesym identsym out semicolonsym ifsym identsym a eqsym numbersym 2 thensym identsym out becomessym numbersym 2 semicolonsym writesym identsym out semicolonsym ifsym identsym d leqsym lparentsym identsym c multsym identsym b rparentsym minussym identsym a thensym identsym out becomessym numbersym 3 semicolonsym writesym identsym out semicolonsym ifsym identsym b eqsym numbersym 2 thensym identsym out becomessym numbersym 4 elsesym identsym out becomessym numbersym 5 semicolonsym writesym identsym out semicolonsym ifsym identsym b neqsym numbersym 2 thensym identsym out becomessym numbersym 6 elsesym identsym out becomessym numbersym 7 semicolonsym writesym identsym out semicolonsym ifsym identsym c eqsym numbersym 3 thensym beginsym identsym out becomessym numbersym 0 semicolonsym identsym out becomessym identsym out plussym identsym a semicolonsym identsym out becomessym identsym out plussym identsym b semicolonsym identsym out becomessym identsym out plussym identsym c semicolonsym endsym semicolonsym writesym identsym out semicolonsym ifsym identsym c eqsym numbersym 5 thensym beginsym identsym out becomessym numbersym 0 semicolonsym identsym out becomessym numbersym 5 semicolonsym identsym out becomessym identsym out plussym numbersym 10 semicolonsym identsym out becomessym identsym out minussym numbersym 5 semicolonsym endsym elsesym beginsym identsym out becomessym numbersym 15 semicolonsym identsym out becomessym identsym out minussym identsym b semicolonsym identsym out becomessym identsym out minussym identsym a semicolonsym identsym out becomessym identsym out multsym numbersym 2 semicolonsym endsym semicolonsym writesym identsym out semicolonsym ifsym identsym a lessym numbersym 10 thensym ifsym identsym b lessym numbersym 10 thensym ifsym identsym c lessym numbersym 10 thensym ifsym identsym d lessym numbersym 10 thensym identsym out becomessym numbersym 100 semicolonsym writesym identsym out semicolonsym ifsym identsym a gtrsym numbersym 10 thensym identsym out becomessym numbersym 1 elsesym ifsym identsym b gtrsym numbersym 10 thensym identsym out becomessym numbersym 2 elsesym ifsym identsym c gtrsym numbersym 10 thensym identsym out becomessym numbersym 3 elsesym ifsym identsym d gtrsym numbersym 10 thensym identsym out becomessym numbersym 4 elsesym identsym out becomessym numbersym 20 semicolonsym writesym identsym out semicolonsym endsym periodsym 
+
+No errors, program is syntactically correct
+
+Assembly Code:
+Line  OP   R  L  M
+0     jmp  0  0  1
+1     inc  0  0  9
+2     lit  0  0  1
+3     sto  0  0  4
+4     lit  0  0  2
+5     sto  0  0  5
+6     lit  0  0  3
+7     sto  0  0  6
+8     lit  0  0  4
+9     sto  0  0  7
+10    lit  0  0  0
+11    sto  0  0  8
+12    lod  0  0  4
+13    lit  1  0  1
+14    eql  0  0  1
+15    jpc  0  0  18
+16    lit  0  0  1
+17    sto  0  0  8
+18    lod  0  0  8
+19    sio  0  0  0
+20    lod  0  0  4
+21    lit  1  0  2
+22    eql  0  0  1
+23    jpc  0  0  26
+24    lit  0  0  2
+25    sto  0  0  8
+26    lod  0  0  8
+27    sio  0  0  0
+28    lod  0  0  7
+29    lod  1  0  6
+30    lod  2  0  5
+31    mul  1  1  2
+32    lod  2  0  4
+33    sub  1  1  2
+34    leq  0  0  1
+35    jpc  0  0  38
+36    lit  0  0  3
+37    sto  0  0  8
+38    lod  0  0  8
+39    sio  0  0  0
+40    lod  0  0  5
+41    lit  1  0  2
+42    eql  0  0  1
+43    jpc  0  0  47
+44    lit  0  0  4
+45    sto  0  0  8
+46    jmp  0  0  49
+47    lit  0  0  5
+48    sto  0  0  8
+49    lod  0  0  8
+50    sio  0  0  0
+51    lod  0  0  5
+52    lit  1  0  2
+53    neq  0  0  1
+54    jpc  0  0  58
+55    lit  0  0  6
+56    sto  0  0  8
+57    jmp  0  0  60
+58    lit  0  0  7
+59    sto  0  0  8
+60    lod  0  0  8
+61    sio  0  0  0
+62    lod  0  0  6
+63    lit  1  0  3
+64    eql  0  0  1
+65    jpc  0  0  80
+66    lit  0  0  0
+67    sto  0  0  8
+68    lod  0  0  8
+69    lod  1  0  4
+70    add  0  0  1
+71    sto  0  0  8
+72    lod  0  0  8
+73    lod  1  0  5
+74    add  0  0  1
+75    sto  0  0  8
+76    lod  0  0  8
+77    lod  1  0  6
+78    add  0  0  1
+79    sto  0  0  8
+80    lod  0  0  8
+81    sio  0  0  0
+82    lod  0  0  6
+83    lit  1  0  5
+84    eql  0  0  1
+85    jpc  0  0  99
+86    lit  0  0  0
+87    sto  0  0  8
+88    lit  0  0  5
+89    sto  0  0  8
+90    lod  0  0  8
+91    lit  1  0  10
+92    add  0  0  1
+93    sto  0  0  8
+94    lod  0  0  8
+95    lit  1  0  5
+96    sub  0  0  1
+97    sto  0  0  8
+98    jmp  0  0  113
+99    lit  0  0  15
+100   sto  0  0  8
+101   lod  0  0  8
+102   lod  1  0  5
+103   sub  0  0  1
+104   sto  0  0  8
+105   lod  0  0  8
+106   lod  1  0  4
+107   sub  0  0  1
+108   sto  0  0  8
+109   lod  0  0  8
+110   lit  1  0  2
+111   mul  0  0  1
+112   sto  0  0  8
+113   lod  0  0  8
+114   sio  0  0  0
+115   lod  0  0  4
+116   lit  1  0  10
+117   lss  0  0  1
+118   jpc  0  0  133
+119   lod  0  0  5
+120   lit  1  0  10
+121   lss  0  0  1
+122   jpc  0  0  133
+123   lod  0  0  6
+124   lit  1  0  10
+125   lss  0  0  1
+126   jpc  0  0  133
+127   lod  0  0  7
+128   lit  1  0  10
+129   lss  0  0  1
+130   jpc  0  0  133
+131   lit  0  0  100
+132   sto  0  0  8
+133   lod  0  0  8
+134   sio  0  0  0
+135   lod  0  0  4
+136   lit  1  0  10
+137   gtr  0  0  1
+138   jpc  0  0  142
+139   lit  0  0  1
+140   sto  0  0  8
+141   jmp  0  0  165
+142   lod  0  0  5
+143   lit  1  0  10
+144   gtr  0  0  1
+145   jpc  0  0  149
+146   lit  0  0  2
+147   sto  0  0  8
+148   jmp  0  0  165
+149   lod  0  0  6
+150   lit  1  0  10
+151   gtr  0  0  1
+152   jpc  0  0  156
+153   lit  0  0  3
+154   sto  0  0  8
+155   jmp  0  0  165
+156   lod  0  0  7
+157   lit  1  0  10
+158   gtr  0  0  1
+159   jpc  0  0  163
+160   lit  0  0  4
+161   sto  0  0  8
+162   jmp  0  0  165
+163   lit  0  0  20
+164   sto  0  0  8
+165   lod  0  0  8
+166   sio  0  0  0
+167   sio  0  0  3
+
+                      pc      bp      sp      registers
+Initial values        0       1       0       0 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+0   jmp  0  0  1      1       1       0       0 0 0 0 0 0 0 0 
+Stack: 
+
+1   inc  0  0  9      2       1       9       0 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 0 0 0 
+
+2   lit  0  0  1      3       1       9       1 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 0 0 0 0 0 
+
+3   sto  0  0  4      4       1       9       1 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 0 0 0 0 
+
+4   lit  0  0  2      5       1       9       2 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 0 0 0 0 
+
+5   sto  0  0  5      6       1       9       2 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 0 0 0 
+
+6   lit  0  0  3      7       1       9       3 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 0 0 0 
+
+7   sto  0  0  6      8       1       9       3 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 0 0 
+
+8   lit  0  0  4      9       1       9       4 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 0 0 
+
+9   sto  0  0  7      10      1       9       4 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 0 
+
+10  lit  0  0  0      11      1       9       0 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 0 
+
+11  sto  0  0  8      12      1       9       0 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 0 
+
+12  lod  0  0  4      13      1       9       1 0 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 0 
+
+13  lit  1  0  1      14      1       9       1 1 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 0 
+
+14  eql  0  0  1      15      1       9       1 1 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 0 
+
+15  jpc  0  0  18     16      1       9       1 1 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 0 
+
+16  lit  0  0  1      17      1       9       1 1 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 0 
+
+17  sto  0  0  8      18      1       9       1 1 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 1 
+
+18  lod  0  0  8      19      1       9       1 1 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 1 
+
+$R0 = 1
+19  sio  0  0  0      20      1       9       1 1 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 1 
+
+20  lod  0  0  4      21      1       9       1 1 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 1 
+
+21  lit  1  0  2      22      1       9       1 2 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 1 
+
+22  eql  0  0  1      23      1       9       0 2 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 1 
+
+23  jpc  0  0  26     26      1       9       0 2 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 1 
+
+26  lod  0  0  8      27      1       9       1 2 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 1 
+
+$R0 = 1
+27  sio  0  0  0      28      1       9       1 2 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 1 
+
+28  lod  0  0  7      29      1       9       4 2 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 1 
+
+29  lod  1  0  6      30      1       9       4 3 0 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 1 
+
+30  lod  2  0  5      31      1       9       4 3 2 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 1 
+
+31  mul  1  1  2      32      1       9       4 6 2 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 1 
+
+32  lod  2  0  4      33      1       9       4 6 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 1 
+
+33  sub  1  1  2      34      1       9       4 5 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 1 
+
+34  leq  0  0  1      35      1       9       1 5 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 1 
+
+35  jpc  0  0  38     36      1       9       1 5 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 1 
+
+36  lit  0  0  3      37      1       9       3 5 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 1 
+
+37  sto  0  0  8      38      1       9       3 5 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 3 
+
+38  lod  0  0  8      39      1       9       3 5 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 3 
+
+$R0 = 3
+39  sio  0  0  0      40      1       9       3 5 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 3 
+
+40  lod  0  0  5      41      1       9       2 5 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 3 
+
+41  lit  1  0  2      42      1       9       2 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 3 
+
+42  eql  0  0  1      43      1       9       1 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 3 
+
+43  jpc  0  0  47     44      1       9       1 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 3 
+
+44  lit  0  0  4      45      1       9       4 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 3 
+
+45  sto  0  0  8      46      1       9       4 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 4 
+
+46  jmp  0  0  49     49      1       9       4 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 4 
+
+49  lod  0  0  8      50      1       9       4 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 4 
+
+$R0 = 4
+50  sio  0  0  0      51      1       9       4 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 4 
+
+51  lod  0  0  5      52      1       9       2 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 4 
+
+52  lit  1  0  2      53      1       9       2 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 4 
+
+53  neq  0  0  1      54      1       9       0 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 4 
+
+54  jpc  0  0  58     58      1       9       0 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 4 
+
+58  lit  0  0  7      59      1       9       7 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 4 
+
+59  sto  0  0  8      60      1       9       7 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 7 
+
+60  lod  0  0  8      61      1       9       7 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 7 
+
+$R0 = 7
+61  sio  0  0  0      62      1       9       7 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 7 
+
+62  lod  0  0  6      63      1       9       3 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 7 
+
+63  lit  1  0  3      64      1       9       3 3 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 7 
+
+64  eql  0  0  1      65      1       9       1 3 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 7 
+
+65  jpc  0  0  80     66      1       9       1 3 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 7 
+
+66  lit  0  0  0      67      1       9       0 3 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 7 
+
+67  sto  0  0  8      68      1       9       0 3 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 0 
+
+68  lod  0  0  8      69      1       9       0 3 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 0 
+
+69  lod  1  0  4      70      1       9       0 1 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 0 
+
+70  add  0  0  1      71      1       9       1 1 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 0 
+
+71  sto  0  0  8      72      1       9       1 1 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 1 
+
+72  lod  0  0  8      73      1       9       1 1 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 1 
+
+73  lod  1  0  5      74      1       9       1 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 1 
+
+74  add  0  0  1      75      1       9       3 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 1 
+
+75  sto  0  0  8      76      1       9       3 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 3 
+
+76  lod  0  0  8      77      1       9       3 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 3 
+
+77  lod  1  0  6      78      1       9       3 3 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 3 
+
+78  add  0  0  1      79      1       9       6 3 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 3 
+
+79  sto  0  0  8      80      1       9       6 3 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 6 
+
+80  lod  0  0  8      81      1       9       6 3 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 6 
+
+$R0 = 6
+81  sio  0  0  0      82      1       9       6 3 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 6 
+
+82  lod  0  0  6      83      1       9       3 3 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 6 
+
+83  lit  1  0  5      84      1       9       3 5 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 6 
+
+84  eql  0  0  1      85      1       9       0 5 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 6 
+
+85  jpc  0  0  99     99      1       9       0 5 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 6 
+
+99  lit  0  0  15     100     1       9       15 5 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 6 
+
+100 sto  0  0  8      101     1       9       15 5 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 15 
+
+101 lod  0  0  8      102     1       9       15 5 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 15 
+
+102 lod  1  0  5      103     1       9       15 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 15 
+
+103 sub  0  0  1      104     1       9       13 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 15 
+
+104 sto  0  0  8      105     1       9       13 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 13 
+
+105 lod  0  0  8      106     1       9       13 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 13 
+
+106 lod  1  0  4      107     1       9       13 1 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 13 
+
+107 sub  0  0  1      108     1       9       12 1 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 13 
+
+108 sto  0  0  8      109     1       9       12 1 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 12 
+
+109 lod  0  0  8      110     1       9       12 1 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 12 
+
+110 lit  1  0  2      111     1       9       12 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 12 
+
+111 mul  0  0  1      112     1       9       24 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 12 
+
+112 sto  0  0  8      113     1       9       24 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 24 
+
+113 lod  0  0  8      114     1       9       24 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 24 
+
+$R0 = 24
+114 sio  0  0  0      115     1       9       24 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 24 
+
+115 lod  0  0  4      116     1       9       1 2 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 24 
+
+116 lit  1  0  10     117     1       9       1 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 24 
+
+117 lss  0  0  1      118     1       9       1 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 24 
+
+118 jpc  0  0  133    119     1       9       1 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 24 
+
+119 lod  0  0  5      120     1       9       2 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 24 
+
+120 lit  1  0  10     121     1       9       2 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 24 
+
+121 lss  0  0  1      122     1       9       1 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 24 
+
+122 jpc  0  0  133    123     1       9       1 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 24 
+
+123 lod  0  0  6      124     1       9       3 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 24 
+
+124 lit  1  0  10     125     1       9       3 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 24 
+
+125 lss  0  0  1      126     1       9       1 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 24 
+
+126 jpc  0  0  133    127     1       9       1 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 24 
+
+127 lod  0  0  7      128     1       9       4 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 24 
+
+128 lit  1  0  10     129     1       9       4 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 24 
+
+129 lss  0  0  1      130     1       9       1 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 24 
+
+130 jpc  0  0  133    131     1       9       1 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 24 
+
+131 lit  0  0  100    132     1       9       100 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 24 
+
+132 sto  0  0  8      133     1       9       100 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 100 
+
+133 lod  0  0  8      134     1       9       100 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 100 
+
+$R0 = 100
+134 sio  0  0  0      135     1       9       100 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 100 
+
+135 lod  0  0  4      136     1       9       1 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 100 
+
+136 lit  1  0  10     137     1       9       1 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 100 
+
+137 gtr  0  0  1      138     1       9       0 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 100 
+
+138 jpc  0  0  142    142     1       9       0 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 100 
+
+142 lod  0  0  5      143     1       9       2 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 100 
+
+143 lit  1  0  10     144     1       9       2 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 100 
+
+144 gtr  0  0  1      145     1       9       0 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 100 
+
+145 jpc  0  0  149    149     1       9       0 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 100 
+
+149 lod  0  0  6      150     1       9       3 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 100 
+
+150 lit  1  0  10     151     1       9       3 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 100 
+
+151 gtr  0  0  1      152     1       9       0 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 100 
+
+152 jpc  0  0  156    156     1       9       0 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 100 
+
+156 lod  0  0  7      157     1       9       4 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 100 
+
+157 lit  1  0  10     158     1       9       4 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 100 
+
+158 gtr  0  0  1      159     1       9       0 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 100 
+
+159 jpc  0  0  163    163     1       9       0 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 100 
+
+163 lit  0  0  20     164     1       9       20 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 100 
+
+164 sto  0  0  8      165     1       9       20 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 20 
+
+165 lod  0  0  8      166     1       9       20 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 20 
+
+$R0 = 20
+166 sio  0  0  0      167     1       9       20 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 20 
+
+167 sio  0  0  3      168     1       9       20 10 1 0 0 0 0 0 
+Stack: 0 0 0 0 1 2 3 4 20 
+

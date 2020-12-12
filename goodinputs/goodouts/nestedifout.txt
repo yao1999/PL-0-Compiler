@@ -1,0 +1,31 @@
+7 0 0 1		jump to first instr
+6 0 0 7		load 3 variables (x, y, z)
+1 0 0 12	load 0 into register 0
+4 0 0 4		store reg 0(12) into x
+1 0 0 10	load 10 into register 0
+4 0 0 5		store reg 0(10) into y
+3 0 0 4		load x into reg 0
+3 1 0 5		load y into reg 1
+23 0 0 1	compare reg 0 and reg 1 and see if r[0] > r[1]. store result in reg 0
+8 0 0 18	if reg 0 true, jump to line 18 (end of first if)
+1 0 0 3		load 1 into reg 0
+4 0 0 4		store reg 0(3) into x
+3 0 0 6		load z into reg 0
+3 1 0 4		load x into reg 1
+21 0 0 1	reg 0 < reg 1? store result in reg 0
+8 0 0 18	if reg0 false, jump to line 18 (end of nested if)
+1 0 0 999	load 999 into reg 0
+4 0 0 6		store reg 0 in z
+3 0 0 4		store x in reg 0
+1 1 0 2		store 2 in reg 1
+24 0 0 1	reg 0 >= reg 1? store result in reg 0
+8 0 0 32	if reg 0 false, jump to 32(end second if)
+1 0 0 0		store 0 in reg 0
+4 0 0 4		store reg 0 in x
+3 0 0 5		store y in reg 0
+1 1 0 200	store 200 in reg 1
+22 0 0 1	reg 0 <= reg 1? store result in reg 0
+8 0 0 30	if reg0 false, jump to 30 (end nested if)
+1 0 0 888	store 888 in reg 0
+4 0 0 6		store reg 0(888) in z
+11 0 0 3	end program

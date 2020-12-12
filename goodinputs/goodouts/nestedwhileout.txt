@@ -1,0 +1,34 @@
+7 0 0 1		jump to first instr
+6 0 0 7		load 3 variables (x, y, z)
+1 0 0 12	load 12 into register 0
+4 0 0 4		store reg 0(12) into x
+1 0 0 33	load 33 into register 0
+4 0 0 5		store reg 0(33) into y
+1 0 0 44	load 44 into reg 0
+4 0 0 6		store reg 0 in z
+3 0 0 4		load x into reg 0
+1 1 0 13	load i into reg 1
+20 0 0 1	reg 0 != reg 1? store result in reg 0
+8 0 0 33	if reg 0 false, jump to line 33 (end of program)
+3 0 0 4		load x into reg 0
+1 1 0 1		load 1 into reg 1
+13 0 0 1	add reg 0 and 1 and store in reg 0
+4 0 0 4		store reg 0 into x
+1 0 0 33	load 33 into reg 0
+3 1 0 5		load y into reg 1
+19 0 0 1	reg 0 = reg 1? store result in reg 0
+8 0 0 32	if reg 0 false, jump to line 32 (past end of 2nd while)
+1 0 0 999	store 999 in reg 0
+4 0 0 5		store reg 0 into y
+1 0 0 3		load 3 into reg 0
+3 1 0 6		load z into reg 1
+13 0 0 1	add reg 0 + reg 1, put in reg 0
+1 1 0 5		store 5 in reg 1
+23 0 0 1	reg 0 > reg 1? store result in reg 0
+8 0 0 31	if reg 0 false, jump to 31 (past end of third while)
+1 0 0 1		store 1 in reg 0
+4 0 0 6		store reg 0 in z
+7 0 0 22	jump back to line 22 (start of while 3)
+7 0 0 16	jump back to line 16 (start of while 2)
+7 0 0 8		jump back to line 8 (start of while 1) and keep going.
+11 0 0 3	end program

@@ -1,0 +1,35 @@
+7 0 0 28	jump to after fact
+7 0 0 2		jump to FACT
+6 0 0 5		load 1 variables (ans1) 		START FACT
+3 0 1 5		load n into reg 0
+4 0 0 4		store reg0(n) into ans1
+3 0 1 5		load n into reg 0
+1 1 0 1		load 1 into reg 1
+14 0 0 1	reg0-reg1, store in reg0
+4 0 1 5		store reg 0 into n
+3 0 1 5		load n into reg 0  			START IF1
+1 1 0 0		load 0 into reg 1  			
+19 0 0 1	see if reg 0 = reg 1  			
+8 0 0 16	if reg 0 false, jump to line 15 (if2)
+1 0 0 1		load 1 into reg 0			
+4 0 1 4		store reg 0(1) into f 			END IF1
+7 0 0 18	jump to after else			ELSE
+1 0 0 3		load 3 into regi 0
+4 0 1 4		store regi 0 into f			END ELSE
+3 0 1 5		load n into reg 0			START IF2
+1 1 0 0		load 0 into reg 1			
+23 0 0 1	see if reg 0 > reg 1			
+8 0 0 20	if reg 0 false, jump to line 20 (f*ans1)	
+5 0 1 2		call fact (line 2)			END IF2
+3 0 1 4		load f into reg 0
+3 1 0 4		load ans1 into reg 1
+15 0 0 1	reg0*reg1, store in reg 0
+4 0 1 4		store reg 0 in f
+2 0 0 0		return from fact			END FACT
+6 0 0 6		load 2 variables (f, n)
+1 0 0 3		load 3 into reg 0
+4 0 0 5		store reg 0 into n
+5 0 0 2		call fact (line 2)
+3 0 0 4		load f into reg 0
+9 0 0 1		write reg 0(f) to the screen
+11 0 0 3	end program

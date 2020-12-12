@@ -1,0 +1,21 @@
+var x, y, z;
+begin	
+  x := 12;
+  y := 10;
+  if x > y then
+  begin
+    x := 3;
+    if z < x then 
+    begin
+      z := 999;
+    end;
+  end;
+  if x >= 2 then 
+  begin
+    x := 0;
+    if y <= 200 then
+    begin
+   	 z := 888;
+    end;
+  end;	
+end.

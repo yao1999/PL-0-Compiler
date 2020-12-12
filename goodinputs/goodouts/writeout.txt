@@ -1,0 +1,15 @@
+7  0  0  1		jump to first instr
+6  0  0  7		load 3 variables (x, y, z) (4(prestored) + 3(# var))
+3  0  0  5		load value of y (which is at addr 5) and store in reg 0
+1  1  0  56		load literal value 56 and store in reg 1 temporarily
+13 0  0  1		add reg 0 and reg 1 and store in reg 0
+4  0  0  4		store reg 0 into x (which is at address 4)
+1  0  0  99		load value 5 into register 0
+4  0  0  5		store reg 0(99) into y
+3  0  0  5		load the value of x into reg 0
+9  0  0  1		write register 0 to the screen (this will be 99)
+3  0  0  4		load value of x (which is at addr 4) store in reg 0
+3  1  0  5		load value of y (which is at addr 5) store in reg 1
+13 0  0  1		add x and y, store in reg 0
+4  0  0  6		store in z
+11 0  0  3		end the program

@@ -1,0 +1,9 @@
+7 0 0 1		jump to first instr
+6 0 0 6		load 2 variables (i, h)
+1 0 0 3		store literal value 3
+4 0 0 4		put 3 into i (which is register 4 because 0-3 are taken)
+1 0 0 9		store literal value 9
+4 0 0 5		put literal value into h (which is register 5, 0-3 are taken and x is 4)
+1 0 0 8		load n (=8, constant)
+4 0 0 4		store in i
+11 0 0 3	end program
