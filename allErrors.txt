@@ -1,0 +1,389 @@
+Source Program:
+
+***** Error number 0. FILE NOT FOUND.
+
+Source Program:
+var x, y;
+begin
+  x = 56;
+end.
+
+Lexeme List:
+29 2 x 17 2 y 18 21 2 x 9 3 56 18 22 19 
+
+Symbolic Representation:
+varsym identsym x commasym identsym y semicolonsym beginsym identsym x eqsym numbersym 56 semicolonsym endsym periodsym 
+
+***** Error number 1. Use = instead of :=.
+
+
+Source Program:
+const z = ;
+var x, y;
+begin
+    x := y + 3;
+end.
+
+Lexeme List:
+28 2 z 9 18 29 2 x 17 2 y 18 21 2 x 20 2 y 4 3 3 18 22 19 
+
+Symbolic Representation:
+constsym identsym z eqsym semicolonsym varsym identsym x commasym identsym y semicolonsym beginsym identsym x becomessym identsym y plussym numbersym 3 semicolonsym endsym periodsym 
+
+***** Error number 2. = must be followed by a number.
+
+
+Source Program:
+const z;
+var x, y;
+begin
+    x := y + 3;
+end.
+
+Lexeme List:
+28 2 z 18 29 2 x 17 2 y 18 21 2 x 20 2 y 4 3 3 18 22 19 
+
+Symbolic Representation:
+constsym identsym z semicolonsym varsym identsym x commasym identsym y semicolonsym beginsym identsym x becomessym identsym y plussym numbersym 3 semicolonsym endsym periodsym 
+
+***** Error number 3. Identifier must be followed by =.
+
+
+Source Program:
+var;
+begin
+    x := y + 3;
+end.
+
+Lexeme List:
+29 18 21 2 x 20 2 y 4 3 3 18 22 19 
+
+Symbolic Representation:
+varsym semicolonsym beginsym identsym x becomessym identsym y plussym numbersym 3 semicolonsym endsym periodsym 
+
+***** Error number 4. const and var must be followed by identifier.
+
+
+Source Program:
+var x, y
+begin
+    x := y + 56;
+end.
+
+Lexeme List:
+29 2 x 17 2 y 21 2 x 20 2 y 4 3 56 18 22 19 
+
+Symbolic Representation:
+varsym identsym x commasym identsym y beginsym identsym x becomessym identsym y plussym numbersym 56 semicolonsym endsym periodsym 
+
+***** Error number 5. Semicolon or comma missing.
+
+
+Source Program:
+var x,y,z,v,w;
+procedure a;
+  var x,y,u,v;
+  procedure b
+    var y,z,v;
+    begin
+      y:=2;
+    end;
+  begin
+    z:=3;
+    call b
+  end;
+begin
+  x:=1;
+  call a;
+end.
+
+***** Error number 6. Incorrect symbol after procedure declaration.
+
+
+Source Program:
+var x, y;
+begin
+  x := 5 > 56;
+end.
+
+Lexeme List:
+29 2 x 17 2 y 18 21 2 x 20 3 5 13 3 56 18 22 19 
+
+Symbolic Representation:
+varsym identsym x commasym identsym y semicolonsym beginsym identsym x becomessym numbersym 5 gtrsym numbersym 56 semicolonsym endsym periodsym 
+
+***** Error number 8. Incorrect symbol after statement part in block.
+
+
+Source Program:
+var x, y;
+begin
+    x := y + 56;
+end
+
+Lexeme List:
+29 2 x 17 2 y 18 21 2 x 20 2 y 4 3 56 18 22 
+
+Symbolic Representation:
+varsym identsym x commasym identsym y semicolonsym beginsym identsym x becomessym identsym y plussym numbersym 56 semicolonsym endsym 
+
+***** Error number 9. Period expected.
+
+
+Source Program:
+var x, y;
+begin
+  x := n + 56;
+end.
+
+Lexeme List:
+29 2 x 17 2 y 18 21 2 x 20 2 n 4 3 56 18 22 19 
+
+Symbolic Representation:
+varsym identsym x commasym identsym y semicolonsym beginsym identsym x becomessym identsym n plussym numbersym 56 semicolonsym endsym periodsym 
+
+***** Error number 11. Undeclared identifier.
+
+
+Source Program:
+const z = 2;
+var x, y;
+begin
+  z := y + 56;
+end.
+
+Lexeme List:
+28 2 z 9 3 2 18 29 2 x 17 2 y 18 21 2 z 20 2 y 4 3 56 18 22 19 
+
+Symbolic Representation:
+constsym identsym z eqsym numbersym 2 semicolonsym varsym identsym x commasym identsym y semicolonsym beginsym identsym z becomessym identsym y plussym numbersym 56 semicolonsym endsym periodsym 
+
+***** Error number 12. Assignment to constant is not allowed.
+
+
+Source Program:
+var x, y;
+begin
+  x * 56;
+end.
+
+Lexeme List:
+29 2 x 17 2 y 18 21 2 x 6 3 56 18 22 19 
+
+Symbolic Representation:
+varsym identsym x commasym identsym y semicolonsym beginsym identsym x multsym numbersym 56 semicolonsym endsym periodsym 
+
+***** Error number 13. Assignment operator expected.
+
+
+Source Program:
+var x,y;
+procedure sub;
+  var j,h;
+  begin
+    j:=1;
+  end;
+begin
+  x:=3;
+  call;
+end.
+
+Lexeme List:
+29 2 x 17 2 y 18 30 2 sub 18 29 2 j 17 2 h 18 21 2 j 20 3 1 18 22 18 21 2 x 20 3 3 18 27 18 22 19 
+
+Symbolic Representation:
+varsym identsym x commasym identsym y semicolonsym procsym identsym sub semicolonsym varsym identsym j commasym identsym h semicolonsym beginsym identsym j becomessym numbersym 1 semicolonsym endsym semicolonsym beginsym identsym x becomessym numbersym 3 semicolonsym callsym semicolonsym endsym periodsym 
+
+***** Error number 14. call must be followed by an identifier.
+
+
+Source Program:
+var x, y;
+begin
+  x;
+end.
+
+Lexeme List:
+29 2 x 17 2 y 18 21 2 x 18 22 19 
+
+Symbolic Representation:
+varsym identsym x commasym identsym y semicolonsym beginsym identsym x semicolonsym endsym periodsym 
+
+***** Error number 15. Call of a constant or variable is meaningless.
+
+
+Source Program:
+var x, y;
+begin
+  if x > 0
+    x := y + 3;
+end.
+
+Lexeme List:
+29 2 x 17 2 y 18 21 23 2 x 13 3 0 2 x 20 2 y 4 3 3 18 22 19 
+
+Symbolic Representation:
+varsym identsym x commasym identsym y semicolonsym beginsym ifsym identsym x gtrsym numbersym 0 identsym x becomessym identsym y plussym numbersym 3 semicolonsym endsym periodsym 
+
+***** Error number 16. then expected.
+
+
+Source Program:
+var x, y;
+begin
+  while x > 0
+    x := y + 3;
+end.
+
+Lexeme List:
+29 2 x 17 2 y 18 21 25 2 x 13 3 0 2 x 20 2 y 4 3 3 18 22 19 
+
+Symbolic Representation:
+varsym identsym x commasym identsym y semicolonsym beginsym whilesym identsym x gtrsym numbersym 0 identsym x becomessym identsym y plussym numbersym 3 semicolonsym endsym periodsym 
+
+***** Error number 18. do expected.
+
+
+Source Program:
+var x, y;
+begin
+  x := y + 3;
+
+Lexeme List:
+29 2 x 17 2 y 18 21 2 x 20 2 y 4 3 3 18 
+
+Symbolic Representation:
+varsym identsym x commasym identsym y semicolonsym beginsym identsym x becomessym identsym y plussym numbersym 3 semicolonsym 
+
+***** Error number 19. Incorrect symbol following statement.
+
+
+Source Program:
+var x, y;
+begin
+  if (x + y) then
+    x := y + 56;
+end.
+
+Lexeme List:
+29 2 x 17 2 y 18 21 23 15 2 x 4 2 y 16 24 2 x 20 2 y 4 3 56 18 22 19 
+
+Symbolic Representation:
+varsym identsym x commasym identsym y semicolonsym beginsym ifsym lparentsym identsym x plussym identsym y rparentsym whilesym identsym x becomessym identsym y plussym numbersym 56 semicolonsym endsym periodsym 
+
+***** Error number 20. Relational operator expected.
+
+
+Source Program:
+var x,y;
+procedure sub;
+  var j,h;
+  begin
+    j:=1;
+  end;
+begin
+  x := sub + 56;
+  call sub;
+end.
+
+Lexeme List:
+29 2 x 17 2 y 18 30 2 sub 18 29 2 j 17 2 h 18 21 2 j 20 3 1 18 22 18 21 2 x 20 2 sub 4 3 56 18 27 2 sub 18 22 19 
+
+Symbolic Representation:
+varsym identsym x commasym identsym y semicolonsym procsym identsym sub semicolonsym varsym identsym j commasym identsym h semicolonsym beginsym identsym j becomessym numbersym 1 semicolonsym endsym semicolonsym beginsym identsym x becomessym identsym sub plussym numbersym 56 semicolonsym callsym identsym sub semicolonsym endsym periodsym 
+
+***** Error number 21. Expression must not contain a procedure identifier.
+
+
+Source Program:
+var x, y;
+begin
+  x := (y + 56;
+end.
+
+Lexeme List:
+29 2 x 17 2 y 18 21 2 x 20 15 2 y 4 3 56 18 22 19 
+
+Symbolic Representation:
+varsym identsym x commasym identsym y semicolonsym beginsym identsym x becomessym lparentsym identsym y plussym numbersym 56 semicolonsym endsym periodsym 
+
+***** Error number 22. Right parenthesis missing.
+
+
+Source Program:
+var x, y;
+begin
+  x := * y + 56;
+end.
+
+Lexeme List:
+29 2 x 17 2 y 18 21 2 x 20 6 2 y 4 3 56 18 22 19 
+
+Symbolic Representation:
+varsym identsym x commasym identsym y semicolonsym beginsym identsym x becomessym multsym identsym y plussym numbersym 56 semicolonsym endsym periodsym 
+
+***** Error number 23. The preceding factor cannot begin with this symbol.
+
+
+Source Program:
+var x, y;
+begin
+  x :=;
+end.
+
+Lexeme List:
+29 2 x 17 2 y 18 21 2 x 20 18 22 19 
+
+Symbolic Representation:
+varsym identsym x commasym identsym y semicolonsym beginsym identsym x becomessym semicolonsym endsym periodsym 
+
+***** Error number 24. An expression cannot begin with this symbol.
+
+
+Source Program:
+var x, y;
+begin
+  x := y + 123456;
+end.
+
+***** Error number 25. This number is too large.
+Number 123456 is too long
+
+
+Source Program:
+var x, y;
+begin
+  x := ylongnamesrlong + 3;
+end.
+
+***** Error number 26. Identifier too long.
+Name ylongnamesrlong is too long
+
+
+Source Program:
+var x, y;
+begin
+  x := y # 3;
+end.
+
+***** Error number 27. Invalid symbol.
+# is invalid
+
+
+Source Program:
+var x, 1sabsy;
+begin
+  x := 1sabsy + 3;
+end.
+
+***** Error number 28. This variable does not start with letter.
+1sabsy is invalid
+
+
+Source Program:
+var x, y;
+begin
+  x := /* y + 3;
+end.
+
+***** Error number 29. Invalid comment.
